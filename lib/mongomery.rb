@@ -155,7 +155,7 @@ module Mongomery
     end
 
     def build_arel
-      table.project(table[:*]).tap do |t|
+      table.project("*").tap do |t|
         t.where(condition) if condition
       end
     end
