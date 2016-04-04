@@ -144,14 +144,14 @@ module Mongomery
       end
     end
 
+    def condition
+      @condition ||= translate(@where)
+    end
+
     private
 
     def mapped_keys
       mapped_properties.keys
-    end
-
-    def condition
-      @condition ||= translate(@where)
     end
 
     def build_arel
